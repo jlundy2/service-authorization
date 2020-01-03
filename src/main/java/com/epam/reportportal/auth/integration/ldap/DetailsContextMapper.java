@@ -17,8 +17,6 @@ package com.epam.reportportal.auth.integration.ldap;
 
 import com.epam.reportportal.auth.util.AuthUtils;
 import com.epam.ta.reportportal.commons.ReportPortalUser;
-import com.epam.ta.reportportal.entity.user.ProjectUser;
-import com.epam.ta.reportportal.entity.ldap.SynchronizationAttributes;
 import com.epam.ta.reportportal.entity.user.User;
 import org.springframework.ldap.core.DirContextOperations;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,9 +24,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.ldap.userdetails.LdapUserDetailsMapper;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
