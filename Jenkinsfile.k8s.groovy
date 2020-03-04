@@ -79,6 +79,8 @@ podTemplate(
                         stage('Test') {
                             sh "gradle --build-cache test --full-stacktrace"
                         }
+
+                        sast('reportportal_services_sast', 'rp/carrier/config.yaml', 'service-authorization', false)
                     }
                 }
             } finally {
@@ -94,8 +96,6 @@ podTemplate(
 
                 }
             }
-
-            sast('reportportal_services_sast', 'rp/carrier/config.yaml', 'service-authorization', false)
         }
 
         stage('Deploy to Dev') {
